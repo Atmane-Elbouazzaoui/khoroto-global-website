@@ -48,6 +48,10 @@ handles button clicks; no auto-advance, timers, observers, animation loops or
 carousel library are included. Local preparation passes for 53 public files,
 14 pages, 548 internal references and all five invitation groups. Live results
 are recorded separately in `notes/verification-home-layout-live.json`.
+Styles and module URLs include their content hashes. Pages serves CSS with a
+600-second cache lifetime; versioned URLs make a new layout available immediately
+without requiring visitors to clear a previously cached stylesheet. Hashes are
+computed by the offline Python build, with no extra browser JavaScript.
 
 Source is published from `main:/docs` using standard GitHub Pages branch
 publishing. The owner-confirmed account credential lacks workflow-write scope;

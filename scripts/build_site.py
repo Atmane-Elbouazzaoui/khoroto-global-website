@@ -2,6 +2,7 @@
 """Render a portable static site using only Python's standard library."""
 from pathlib import Path
 from html import escape
+import hashlib
 import json
 import re
 import shutil
@@ -57,6 +58,11 @@ def screenshot_gallery(prefix):
     return "\n".join(cards)
 
 
+def versioned_asset(prefix, path):
+    digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+    return f"{prefix}{path}?v={digest}"
+
+
 def render(page):
     path = page["path"]
     prefix = "../" * (len(Path(path).parts) - 1)
@@ -77,7 +83,7 @@ def render(page):
     picture = page.get("image", "assets/khoroto-logo.png")
     title, description = escape(page["title"], quote=True), escape(page["description"], quote=True)
     robots = '<meta name="robots" content="noindex, nofollow">' if page.get("noindex") else ""
-    script = f'<script type="module" src="{prefix}{page["script"]}"></script>' if page.get("script") else ""
+    script = f'<script type="module" src="{versioned_asset(prefix, page["script"])}"></script>' if page.get("script") else ""
     return f'''<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,7 +94,7 @@ def render(page):
 <meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta property="og:image" content="{ORIGIN}/{picture}"><meta property="og:image:alt" content="Khoroto Global — games by Radi Akka">
 <meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="{prefix}assets/khoroto-logo.png" sizes="885x885"><link rel="manifest" href="{prefix}site.webmanifest">
-<link rel="stylesheet" href="{prefix}css/style.css"><link rel="stylesheet" href="{prefix}css/khoroto.css">
+<link rel="stylesheet" href="{versioned_asset(prefix, 'css/style.css')}"><link rel="stylesheet" href="{versioned_asset(prefix, 'css/khoroto.css')}">
 </head><body><a class="skip-link" href="#main">Skip to content</a>{navigation(prefix)}<main id="main">{body}</main>{footer(prefix)}{script}</body></html>
 '''
 
