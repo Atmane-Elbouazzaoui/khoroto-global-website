@@ -6,8 +6,9 @@ after new-site verification; preserve old invitation compatibility. Ad-seller
 authorization is deliberately pending. Existing sites and iOS stay unchanged.
 
 The owner selected **khorotoglobal.xyz** after reviewing the first-year and renewal
-prices. The owner will perform the website visual check. Purchase confirmation,
-DNS setup and the custom-domain certificate are still pending.
+prices and confirmed purchase on Namecheap using BasicDNS. The owner will perform
+the website visual check. The production CNAME is prepared; DNS setup and the
+custom-domain certificate still need verification.
 
 ## Hosting
 
