@@ -63,6 +63,8 @@ def check():
             errors.append(f'{name}: missing developer identity')
         if re.search(r'Pippin Plaza|Alulim Games|Atmane El Bouazzaoui', visible, re.I):
             errors.append(f'{name}: old public identity')
+        if 'armando.b.higgin@gmail.com' in raw:
+            errors.append(f'{name}: superseded public email')
         if '@@ROOT@@' in raw or '__VERIFIED_' in raw:
             errors.append(f'{name}: unresolved placeholder')
         for image in page.images:

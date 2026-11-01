@@ -4,8 +4,13 @@
 
 Owner supplied: Khoroto Global; developer given name Akka, family name Radi;
 displayed name Radi Akka; individual game developer based in Morocco;
-armando.b.higgin@gmail.com; khorotoglobal.xyz; supplied Khoroto logo. Confirmed
+support@khorotoglobal.xyz; khorotoglobal.xyz; supplied Khoroto logo. Confirmed
 Android-only coverage for Piccolo Squad and Brainrot Bills. No iOS changes.
+
+On November 1, the owner confirmed that `support@khorotoglobal.xyz` forwards
+through Namecheap to their existing Gmail inbox and that a delivery test worked.
+This is owner-reported receipt; no email was sent by the agent. The public site
+uses the domain address for support, privacy and deletion requests.
 
 The logo copy is byte-identical to the supplied PNG:
 `406c580ea9df593a3b9dc1121242624364c3a9c29cf24a3aacb2957eb29e8b3d`.
