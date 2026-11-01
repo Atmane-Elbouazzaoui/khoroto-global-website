@@ -7,8 +7,20 @@ authorization is deliberately pending. Existing sites and iOS stay unchanged.
 
 The owner selected **khorotoglobal.xyz** after reviewing the first-year and renewal
 prices and confirmed purchase on Namecheap using BasicDNS. The owner will perform
-the website visual check. The production CNAME is prepared; DNS setup and the
-custom-domain certificate still need verification.
+the website visual check. DNS and HTTPS are verified, and HTTPS is enforced.
+The owner configured Namecheap forwarding for `support@khorotoglobal.xyz` to
+their existing Gmail inbox and confirmed a successful delivery test.
+
+The support-address publication is commit `d408833f9c97536df5fef10ce383780662a8c1fd`,
+Pages run `41266089273` (success). GitHub's certificate restart generated CNAME
+commits `fc6dd3e` and `316b888`; the resulting domain remains `khorotoglobal.xyz`.
+All 34 public files returned HTTPS 200 and matched their prepared source bytes.
+`www` redirects to the apex, and HTTP redirects to HTTPS. The local operational
+report is `notes/verification-live.json` (ignored).
+
+The owner chose to verify only the new Android host and preserve old invitations
+through in-game paste parsing. Existing sites and Apple associations remain
+unchanged. Android device verification awaits the actual signed build certificate.
 
 ## Hosting
 

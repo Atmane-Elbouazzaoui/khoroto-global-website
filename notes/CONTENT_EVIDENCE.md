@@ -12,6 +12,10 @@ through Namecheap to their existing Gmail inbox and that a delivery test worked.
 This is owner-reported receipt; no email was sent by the agent. The public site
 uses the domain address for support, privacy and deletion requests.
 
+The owner later clarified that Radi Akka is the responsible Android publisher,
+with the user contributing development. The live iOS release keeps its existing
+domain and setup.
+
 The logo copy is byte-identical to the supplied PNG:
 `406c580ea9df593a3b9dc1121242624364c3a9c29cf24a3aacb2957eb29e8b3d`.
 
