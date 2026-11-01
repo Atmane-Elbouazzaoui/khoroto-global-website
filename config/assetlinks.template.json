@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.piccolosquad.online.coop.party.puzzle",
+      "sha256_cert_fingerprints": [
+        "__VERIFIED_PLAY_APP_SIGNING_SHA256__"
+      ]
+    }
+  }
+]

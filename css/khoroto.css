@@ -1,0 +1,31 @@
+/* Khoroto identity and small additions; the Alulim theme is preserved intact. */
+.site-footer .brand-mark { padding: .25rem; background: var(--paper-light); }
+.prose, .story-copy, .hero-lead, .footer-intro { overflow-wrap: anywhere; }
+.document-section { padding-top: 1.5rem; }
+.piccolo-cover { aspect-ratio: 4 / 3; object-fit: cover; }
+.piccolo-catalog img { aspect-ratio: 4 / 3 !important; object-fit: cover !important; }
+.game-wordmark { width: min(80%, 26rem); margin: 1.5rem auto; }
+.email-link { overflow-wrap: anywhere; }
+.support-links { display: grid; gap: .75rem; }
+.service-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+.service-table th, .service-table td { padding: 1rem .75rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.service-table th { color: var(--ink); }
+.license-notice { padding: 1.25rem; border: 1px solid var(--line); background: var(--paper-light); font: .8rem/1.6 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.party-section { padding: clamp(3rem, 7vw, 6rem) 0; }
+.party-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.party-card { padding: clamp(1.5rem, 5vw, 3.5rem); border: 1px solid var(--ink); background: var(--paper-light); box-shadow: .8rem .8rem 0 var(--clay); }
+.party-card h1 { font-size: clamp(3rem, 7vw, 5.5rem); text-transform: uppercase; }
+.party-card h2 { font-size: 1.75rem; }
+.party-code { display: block; margin: 1.5rem 0; color: var(--lapis-dark); font: 700 clamp(2.5rem, 8vw, 4.5rem)/1.2 var(--mono); letter-spacing: .08em; }
+.party-facts { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.party-facts div { display: grid; gap: .25rem; }
+.party-facts dt { font: .65rem var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.party-facts dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+.party-actions { display: grid; gap: .8rem; }
+.party-actions button { cursor: pointer; }
+.party-note { margin-top: 1.75rem; color: var(--ink-soft); font-size: .92rem; }
+.copy-fallback { width: 100%; min-height: 6rem; margin-top: 1rem; padding: .75rem; font: .8rem/1.5 var(--mono); overflow-wrap: anywhere; resize: vertical; }
+.party-art { border: 1px solid var(--line); }
+[hidden] { display: none !important; }
+@media (max-width: 900px) { .party-layout { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .service-table, .service-table tbody, .service-table tr, .service-table th, .service-table td { display: block; } .service-table thead { display: none; } .service-table td { padding: .6rem 0; } .party-card { box-shadow: .4rem .4rem 0 var(--clay); } }
