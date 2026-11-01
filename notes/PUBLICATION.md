@@ -41,6 +41,14 @@ macOS. No Chrome session was controlled.
 
 ## Hosting
 
+The next homepage revision replaces raw town-square promotion with feature art,
+fills both game panels with gameplay screenshots and introduces a manual two-game
+carousel. The owner specifically requested low CPU use. Its 657-byte script only
+handles button clicks; no auto-advance, timers, observers, animation loops or
+carousel library are included. Local preparation passes for 53 public files,
+14 pages, 548 internal references and all five invitation groups. Live results
+are recorded separately in `notes/verification-home-layout-live.json`.
+
 Source is published from `main:/docs` using standard GitHub Pages branch
 publishing. The owner-confirmed account credential lacks workflow-write scope;
 the initial Actions push was rejected. No ref was published by that rejected

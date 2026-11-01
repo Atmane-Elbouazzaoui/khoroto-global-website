@@ -98,6 +98,27 @@ Primary provider/policy references reviewed:
 
 ## Regression review
 
+The owner identified unwanted blank image areas and raw-background promotion on
+the homepage, then requested a carousel covering both games without heavy script
+or dynamic animation. The revised header uses both games' feature art in a native
+horizontal scroll container. Two optional buttons are enabled by a 657-byte module;
+the images/links remain scrollable without JavaScript. There is no autoplay,
+timer, observer, animation frame callback, library or video. Global motion and the
+sticky-header blur are disabled in the Khoroto stylesheet. This describes source
+behavior, not a measured device temperature or CPU benchmark.
+
+Piccolo's catalogue panel contains three uncropped 4:3 tablet screenshots; Brainrot
+has two stacked gameplay screenshots. The title sizes and catalogue spacing are
+reduced. The party page uses feature art too. No original PNG, invitation script,
+store destination, backend, Unity or iOS file changed in this revision.
+
+The local build passes 14 pages and 548 internal references, all five invitation
+groups, and the new module's syntax check. An isolated event-handler check confirms
+both buttons select the expected native scroll offset, no scrolling happens before
+input, unrelated clicks are ignored, and absent carousel markup is safe. It does
+not establish rendered browser layout; the revised desktop/mobile view still needs
+the owner's review because Chrome control remains unauthorized.
+
 - Critical: no gameplay, saves, networking authority, economy, or iOS changes
   are part of the website build.
 - High: original websites and user artwork remain unchanged; no credential or

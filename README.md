@@ -34,6 +34,13 @@ The gallery includes eight phone/tablet screenshot pairs and both supplied
 feature-graphic sizes. Their original filenames and hashes are recorded in
 `notes/PICCOLO_GALLERY_ASSETS.json`; the PNGs are copied without image edits.
 
+The homepage features both games in a manual native-scroll carousel. Its only
+JavaScript is a 657-byte click handler for the game-selection buttons: no autoplay,
+timers, observers, animation loop or third-party carousel dependency. The game
+catalogue uses a large tablet screenshot with two smaller Piccolo views and two
+stacked Brainrot gameplay screenshots. CSS animation/transition and header blur
+are disabled; screenshots below the hero load lazily.
+
 ## Pages
 
 The site contains the studio home, two game pages, game-policy directory,

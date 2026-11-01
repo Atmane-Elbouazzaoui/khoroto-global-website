@@ -104,6 +104,13 @@ def check():
     for name, listing in expected_listings.items():
         if listing not in pages[name].links:
             errors.append(f'{name}: missing agreed Google Play destination')
+    if 'assets/piccolo-squad-background.png' in pages['index.html'].links:
+        errors.append('Homepage still promotes the raw game background')
+    carousel = SITE / 'js/home-carousel.mjs'
+    if not carousel.is_file() or carousel.stat().st_size > 2048:
+        errors.append('Homepage carousel script missing or above its 2 KiB budget')
+    elif re.search(r'\b(setInterval|setTimeout|requestAnimationFrame|requestIdleCallback|IntersectionObserver|MutationObserver)\b', carousel.read_text()):
+        errors.append('Homepage carousel must stay user-driven without timers or background observers')
     if (SITE / 'CNAME').read_text().strip() != 'khorotoglobal.xyz':
         errors.append('Wrong custom domain')
     if hashlib.sha256((SITE / 'assets/khoroto-logo.png').read_bytes()).hexdigest() != '406c580ea9df593a3b9dc1121242624364c3a9c29cf24a3aacb2957eb29e8b3d':
