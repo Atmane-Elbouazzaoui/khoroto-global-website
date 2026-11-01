@@ -2,9 +2,9 @@
 """Check the site, then prepare the generated /docs Pages source; never pushes."""
 from pathlib import Path
 import argparse
-import shutil
 import subprocess
 import sys
+from copy_asset import copy_asset
 
 ROOT = Path(__file__).resolve().parents[1]
 args = argparse.ArgumentParser()
@@ -22,7 +22,7 @@ if unexpected:
     raise SystemExit('Refusing to overwrite/remove unexpected Pages files: '+str(unexpected))
 for path in files:
     (target/path).parent.mkdir(parents=True,exist_ok=True)
-    shutil.copy2(source/path,target/path)
+    copy_asset(source/path,target/path)
 if options.preview and (target/'CNAME').exists():
     (target/'CNAME').unlink()
 print(f'Prepared {len(files)} public files in docs/; custom domain '+('pending' if options.preview else 'included'))

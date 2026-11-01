@@ -1,0 +1,150 @@
+{
+  "sourceFolder": "Owner-supplied Poogle Play Store Assets",
+  "copyPolicy": "Byte-identical source PNGs; no image edits, crops or recompression",
+  "images": [
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/Piccolo_Squad_iPhone_Corrected_2868x1320.png",
+      "path": "assets/piccolo-squad/01-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "1ddfc3dc5e621d1847e26b0213829c6571f03893660debec5e552d291a335f4f",
+      "bytes": 3111726
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/01_Survival_Online_Coop_2752x2064.png",
+      "path": "assets/piccolo-squad/01-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "81b3c7448afe36cbf3bb4dbcf7ca55397969bf309031dc26cc437d21d6deb12d",
+      "bytes": 3863693
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/02_Rush44_Four_Player_2868x1320.png",
+      "path": "assets/piccolo-squad/02-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "0bd7b8c82fdb32bfcde708a5a43635e2fb02feceec51fab13ff4bcbc86cdf66f",
+      "bytes": 3203753
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/02_Rush44_Four_Player_2752x2064.png",
+      "path": "assets/piccolo-squad/02-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "a3097e1f07236ab94ddce1846744adde090b28b262f91d456b489df9db68f53d",
+      "bytes": 3882320
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/03_Rush51_Coop_Crests_Exit_2868x1320.png",
+      "path": "assets/piccolo-squad/03-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "cb18297bed44a98c21989ab4ff5039b75dc578d7c8962d8aa32c42bc75fbb150",
+      "bytes": 4069647
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/03_Rush51_Coop_Key_Exit_2752x2064.png",
+      "path": "assets/piccolo-squad/03-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "4d329a2e3c699038b077c3358a6e49ba3fcff6018711a49b36a18b82171d38d4",
+      "bytes": 4054743
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/04_Solo40_Switch_Crests_2868x1320.png",
+      "path": "assets/piccolo-squad/04-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "13a53f695528f661adb4fa18a1b9888ce140528235d3bb59f6400cfce2681c9d",
+      "bytes": 4145110
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/04_Solo40_Switch_Solve_2752x2064.png",
+      "path": "assets/piccolo-squad/04-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "23477b9d97d14a4d0a8eb440dc45c39f5f161d746066df8dd583a0957b36497c",
+      "bytes": 3597301
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/05_Solo13_Golden_Key_Crates_2868x1320.png",
+      "path": "assets/piccolo-squad/05-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "8a8d9d51b640e4edfa4b69e8672924501395086f78e1c69871fb02bc6d0ac80b",
+      "bytes": 2938660
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/05_Solo13_Key_Crate_Puzzle_2752x2064.png",
+      "path": "assets/piccolo-squad/05-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "7a7e3ffd3af7b217fd51a7177bcff192468dc992111a8cb271b08142c003a359",
+      "bytes": 3748851
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/06_Solo52_Switch_Soar_2868x1320.png",
+      "path": "assets/piccolo-squad/06-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "c4f09171df7a4cedac76ba25661966ed617c4cf6a71288d4004de6d5a4100aaf",
+      "bytes": 3551126
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/06_Solo52_Flap_Switch_2752x2064.png",
+      "path": "assets/piccolo-squad/06-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "b40929563120d895eb0db49b69ffcf97a3f0f53dfb439d5babef1f75698a1d5c",
+      "bytes": 4442229
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/07_Online_Party_Lobby_2868x1320.png",
+      "path": "assets/piccolo-squad/07-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "02202e36b83c31a9b2e17264c09b30ab2aac8e552b6a57f2ede118e0b7e30566",
+      "bytes": 4095248
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/07_Online_Party_Lobby_2752x2064.png",
+      "path": "assets/piccolo-squad/07-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "1e26b1eea2e6785ea532deab60d0d9610aa28a13ea83a0d23e2f5e5d8f714311",
+      "bytes": 5449164
+    },
+    {
+      "source": "Piccolo_Squad_Phone_8_Screenshots_2868x1320/08_Three_Game_Modes_2868x1320.png",
+      "path": "assets/piccolo-squad/08-phone.png",
+      "width": 2868,
+      "height": 1320,
+      "sha256": "03227e5e933f6881f8a978e89179fb9a99d9fd97ecb846a6d1a35651883364ae",
+      "bytes": 4132315
+    },
+    {
+      "source": "Piccolo_Squad_iPad_8_Screenshots_2752x2064/08_Three_Game_Modes_2752x2064.png",
+      "path": "assets/piccolo-squad/08-tablet.png",
+      "width": 2752,
+      "height": 2064,
+      "sha256": "34ff21b061d1d2825b490111e472742686f14a418efa8408c040240ce16d41a8",
+      "bytes": 5885333
+    },
+    {
+      "source": "Piccolo Squad\u2019s Featured Graphics 1024x500.png",
+      "path": "assets/piccolo-squad/feature-1024.png",
+      "width": 1024,
+      "height": 500,
+      "sha256": "ff27c4bb998d55cced4636ca9d876afda8234b56aae1cfde2d714d2b23e05fa4",
+      "bytes": 542059
+    },
+    {
+      "source": "Piccolo Squad\u2019s Featured Graphics.png",
+      "path": "assets/piccolo-squad/feature-original.png",
+      "width": 1793,
+      "height": 877,
+      "sha256": "224237fb13a3f04fae139820a90e6e08f8e8e7a7a1da40352ce25c991a55e92d",
+      "bytes": 1660374
+    }
+  ]
+}

@@ -35,6 +35,9 @@ class Page(HTMLParser):
         for key in ['href', 'src']:
             if key in a:
                 self.links.append(a[key])
+        for candidate in a.get('srcset', '').split(','):
+            if candidate.strip():
+                self.links.append(candidate.strip().split()[0])
         if tag == 'img':
             self.images.append(a)
         if tag in ['iframe', 'form', 'base']:
@@ -65,7 +68,9 @@ def check():
             errors.append(f'{name}: old public identity')
         if 'armando.b.higgin@gmail.com' in raw:
             errors.append(f'{name}: superseded public email')
-        if '@@ROOT@@' in raw or '__VERIFIED_' in raw:
+        if 'Smash an Egg' in raw:
+            errors.append(f'{name}: superseded Brainrot Bills title')
+        if re.search(r'@@[A-Z_]+@@|__VERIFIED_', raw):
             errors.append(f'{name}: unresolved placeholder')
         for image in page.images:
             if 'alt' not in image or not image.get('width') or not image.get('height'):
@@ -92,6 +97,13 @@ def check():
             references += 1
     if len(pages) != 14:
         errors.append(f'Expected 14 pages, found {len(pages)}')
+    expected_listings = {
+        'piccolo-squad.html': 'https://play.google.com/store/apps/details?id=com.piccolosquad.online.coop.party.puzzle',
+        'brainrot-bills.html': 'https://play.google.com/store/apps/details?id=com.alulimgames.brainrotbills',
+    }
+    for name, listing in expected_listings.items():
+        if listing not in pages[name].links:
+            errors.append(f'{name}: missing agreed Google Play destination')
     if (SITE / 'CNAME').read_text().strip() != 'khorotoglobal.xyz':
         errors.append('Wrong custom domain')
     if hashlib.sha256((SITE / 'assets/khoroto-logo.png').read_bytes()).hexdigest() != '406c580ea9df593a3b9dc1121242624364c3a9c29cf24a3aacb2957eb29e8b3d':

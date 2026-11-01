@@ -41,6 +41,36 @@ than backdate a changed policy to October 15.
 
 ## Piccolo Squad Android
 
+### Store destinations and supplied screenshots
+
+The owner confirmed the published Android title **Brainrot Bills: Smash Egg ASMR**
+and listing `https://play.google.com/store/apps/details?id=com.alulimgames.brainrotbills`.
+A read-only HTTP check returned 200 and found that exact title in the response.
+The old full title has been replaced in page metadata, game copy and policy scope.
+
+The owner requested the final Piccolo Squad destination now:
+`https://play.google.com/store/apps/details?id=com.piccolosquad.online.coop.party.puzzle`.
+It returned HTTP 404 at the check on November 1; the page links to it with neutral
+availability wording. This is not evidence of a live Piccolo listing. Neither
+game page automatically redirects to a store, and no Apple destination was added.
+
+The supplied `Poogle Play Store Assets` folder contains the feature graphics and
+phone/tablet PNGs used in the Piccolo gallery. Eight screenshot pairs and two
+feature sizes were copied byte-for-byte. Full original filenames, dimensions,
+sizes and SHA-256 hashes are in `PICCOLO_GALLERY_ASSETS.json`. Each gallery card
+offers both full-size originals; responsive images retain their natural aspect
+ratio without cropping. The user corrected the painted Flappy Piccolo wording
+in phone images 03/06 and tablet image 06. Fresh visual inspection confirmed the
+corrections, including the explicitly identified `06_Solo52_Flap_Switch_2752x2064.png`.
+
+Local verification: all 18 originals match source, generated and Pages copies
+(72 hash/dimension comparisons); all 52 public files match between dist and docs;
+14 pages, 537 internal references and all five invitation test groups pass.
+Rendered desktop/mobile review remains the owner's next check. Chrome was not
+controlled. On this Mac, independent APFS clones avoid extra physical image copies
+after ordinary copies encountered an actual disk-full error; portable ordinary
+copy fallback is retained. Original images were not changed by the agent.
+
 Read-only source inspection of Pippin_Piccolo_Android:
 
 - `Packages/manifest.json`, `SocialConfiguration.asset`, `ConsentManager.cs`,

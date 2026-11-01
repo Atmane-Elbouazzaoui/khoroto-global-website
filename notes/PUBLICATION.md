@@ -22,6 +22,23 @@ The owner chose to verify only the new Android host and preserve old invitations
 through in-game paste parsing. Existing sites and Apple associations remain
 unchanged. Android device verification awaits the actual signed build certificate.
 
+## Screenshot and store-link update
+
+The current update adds the owner-supplied feature graphics and eight paired
+phone/tablet screenshots to Piccolo Squad, including the corrected Flappy Piccolo
+images. It wires both final Google Play destinations and uses the full published
+Brainrot Bills title **Brainrot Bills: Smash Egg ASMR**. Piccolo's listing is
+prewired by owner request with availability wording; it returned 404 at the
+November 1 check. The Brainrot listing returned 200 with its exact supplied title.
+
+Local preparation passes for 14 pages, 537 internal references, five invitation
+test groups and 52 public files. All 18 supplied PNGs match their manifest hashes
+in source and both generated copies. The original downloads remain unchanged.
+The live deployment report is saved locally as
+`notes/verification-gallery-live.json`; a successful HTTP/hash report still does
+not establish desktop/mobile appearance. The owner will review after restarting
+macOS. No Chrome session was controlled.
+
 ## Hosting
 
 Source is published from `main:/docs` using standard GitHub Pages branch

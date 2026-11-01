@@ -6,11 +6,16 @@ import json
 import re
 import shutil
 import xml.etree.ElementTree as ET
+from copy_asset import copy_asset
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist"
 ORIGIN = "https://khorotoglobal.xyz"
 EMAIL = "support@khorotoglobal.xyz"
+PLAY_URLS = {
+    "PICCOLO_PLAY_URL": "https://play.google.com/store/apps/details?id=com.piccolosquad.online.coop.party.puzzle",
+    "BRAINROT_PLAY_URL": "https://play.google.com/store/apps/details?id=com.alulimgames.brainrotbills",
+}
 
 
 def brand(prefix):
@@ -38,12 +43,30 @@ def footer(prefix):
       <div class="footer-bottom"><p>&copy; 2026 Radi Akka · Khoroto Global.</p><p>Independent games / Made in Morocco</p></div></div></footer>'''
 
 
+def screenshot_gallery(prefix):
+    screenshots = json.loads((ROOT / "content/piccolo-gallery.json").read_text())
+    cards = []
+    for index, shot in enumerate(screenshots, 1):
+        phone, tablet = shot["phone"], shot["tablet"]
+        phone_url, tablet_url = escape(prefix + phone["path"], quote=True), escape(prefix + tablet["path"], quote=True)
+        cards.append(f'''<figure class="gallery-shot"><picture>
+          <source media="(min-width: 900px)" srcset="{tablet_url}" width="{tablet['width']}" height="{tablet['height']}">
+          <img src="{phone_url}" alt="{escape(shot['alt'], quote=True)}" width="{phone['width']}" height="{phone['height']}" loading="lazy" decoding="async">
+          </picture><figcaption><span class="gallery-number">{index:02d}</span><div><strong>{escape(shot['caption'])}</strong>
+          <nav class="gallery-originals" aria-label="Full-size {escape(shot['caption'], quote=True)} screenshots"><a href="{phone_url}">Phone image</a><a href="{tablet_url}">Tablet image</a></nav></div></figcaption></figure>''')
+    return "\n".join(cards)
+
+
 def render(page):
     path = page["path"]
     prefix = "../" * (len(Path(path).parts) - 1)
     if path == "404.html":
         prefix = "/"  # A 404 may be rendered at an arbitrarily deep request path.
     body = (ROOT / "content" / page["body"]).read_text().replace("@@ROOT@@", prefix)
+    for token, url in PLAY_URLS.items():
+        body = body.replace("@@" + token + "@@", escape(url, quote=True))
+    if "@@PICCOLO_GALLERY@@" in body:
+        body = body.replace("@@PICCOLO_GALLERY@@", screenshot_gallery(prefix))
     if page.get("document"):
         sections = re.findall(r'<h2 id="([a-z0-9-]+)">(.*?)</h2>', body)
         toc = "".join(f'<a href="#{key}">{re.sub("<[^>]+>", "", title)}</a>' for key, title in sections)
@@ -74,7 +97,7 @@ def build():
     OUTPUT.mkdir(exist_ok=True)
     pages = json.loads((ROOT / "content/pages.json").read_text())
     for folder in ["assets", "css", "js"]:
-        shutil.copytree(ROOT / folder, OUTPUT / folder, dirs_exist_ok=True)
+        shutil.copytree(ROOT / folder, OUTPUT / folder, dirs_exist_ok=True, copy_function=copy_asset)
     for page in pages:
         target = OUTPUT / page["path"]
         target.parent.mkdir(parents=True, exist_ok=True)

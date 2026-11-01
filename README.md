@@ -1,7 +1,7 @@
 # Khoroto Global
 
 Static GitHub Pages website for **Radi Akka**, an individual game developer based
-in Morocco, publishing **Piccolo Squad** and **Brainrot Bills: Smash an Egg** on
+in Morocco, publishing **Piccolo Squad** and **Brainrot Bills: Smash Egg ASMR** on
 Android under **Khoroto Global**. Public contact: support@khorotoglobal.xyz.
 
 Canonical domain: **https://khorotoglobal.xyz**.
@@ -19,7 +19,7 @@ provide the renderer and invitation checks:
 python3 scripts/build_site.py
 python3 scripts/check_site.py
 node --test scripts/invitation.test.mjs
-python3 scripts/prepare_pages.py --preview
+python3 scripts/prepare_pages.py
 python3 -m http.server 8765 --directory dist --bind 127.0.0.1
 ```
 
@@ -27,6 +27,12 @@ Open http://127.0.0.1:8765 for local review. `dist/` is the checked artifact;
 `docs/` is its generated copy for branch-based GitHub Pages publishing. Edit body
 content in `content/`, shared markup in `scripts/build_site.py`, and additions
 to the preserved theme in `css/khoroto.css`.
+
+On macOS, generated copies use independent copy-on-write clones when supported,
+avoiding duplicate image storage. Other filesystems use ordinary file copies.
+The gallery includes eight phone/tablet screenshot pairs and both supplied
+feature-graphic sizes. Their original filenames and hashes are recorded in
+`notes/PICCOLO_GALLERY_ASSETS.json`; the PNGs are copied without image edits.
 
 ## Pages
 
@@ -49,11 +55,9 @@ an app, redirect to an Apple store, or send invitation data to an API.
 - An optional Actions workflow is saved under `config/`; it is not active. The
   current GitHub credential cannot create workflow files, so branch publishing
   avoids a request for expanded credential scope.
-- Configure the custom domain in GitHub Pages before pointing DNS to it. The
-  generated CNAME documents the intended domain. Configure the same custom domain
-  in repository Pages settings when switching from preview to production.
-- Add the domain's DNS records and enable HTTPS after GitHub issues its
-  certificate. See [publication notes](notes/PUBLICATION.md).
+- The custom domain, Namecheap DNS and enforced HTTPS are configured and verified.
+  Keep the production CNAME when preparing updates. See
+  [publication notes](notes/PUBLICATION.md).
 - Ad-seller authorization was explicitly deferred by the owner. No seller IDs
   from another site are silently authorized here. Add the verified provider
   export as `config/app-ads.verified.txt` when confirmed; it will be deployed as
@@ -63,11 +67,13 @@ an app, redirect to an Apple store, or send invitation data to an API.
   package/signature provenance, and save it as `config/assetlinks.verified.json`
   to publish `/.well-known/assetlinks.json`. An upload key is not automatically
   the Play app-signing key. Do not place private keys or passwords here.
-- The site does not guess store availability. Add download links only after
-  their exact listing and availability are confirmed.
-- Migrate Piccolo Squad Android public URLs only after the new domain is
-  verified. Keep legacy invitation parsing, service endpoints, and the separate
-  iOS checkout intact. A physical Android check remains necessary.
+- Both agreed Google Play URLs are wired. Brainrot Bills: Smash Egg ASMR returned
+  HTTP 200 with its exact title. The owner requested Piccolo Squad's final package
+  URL before launch; it returned HTTP 404 at the latest check, so the page asks
+  visitors to check availability rather than claiming it is already available.
+- Piccolo Squad Android public URLs have migrated after domain verification.
+  Legacy invitation parsing, service endpoints and the separate iOS checkout are
+  preserved. A physical Android check remains necessary.
 
 The developer identity and Android scope were supplied and confirmed by the
 owner. Ad-account authorization remains pending. The developer handles incoming

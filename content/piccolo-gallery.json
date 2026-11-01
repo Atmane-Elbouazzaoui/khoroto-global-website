@@ -1,0 +1,114 @@
+[
+  {
+    "caption": "Stack up. Jump together.",
+    "alt": "A Piccolo Squad co-op party stacks characters, jumps between platforms and presses puzzle buttons.",
+    "phone": {
+      "path": "assets/piccolo-squad/01-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/01-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Beat the clock.",
+    "alt": "Four Piccolo Squad players coordinate jumps and collect crests in a Rush puzzle.",
+    "phone": {
+      "path": "assets/piccolo-squad/02-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/02-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Find the key. Reach the exit.",
+    "alt": "Piccolo Squad players collect quest crests and reach the key and exit together.",
+    "phone": {
+      "path": "assets/piccolo-squad/03-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/03-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Two characters. One puzzle.",
+    "alt": "A solo Piccolo Squad puzzle combines character switching, buttons and quest crests.",
+    "phone": {
+      "path": "assets/piccolo-squad/04-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/04-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Move crates. Make a path.",
+    "alt": "Two characters solve a solo Piccolo Squad crate puzzle and collect the golden key.",
+    "phone": {
+      "path": "assets/piccolo-squad/05-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/05-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Switch and soar.",
+    "alt": "A Piccolo Squad solo puzzle uses the Flappy Piccolo jump to cross platforms.",
+    "phone": {
+      "path": "assets/piccolo-squad/06-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/06-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Your squad is ready.",
+    "alt": "Four characters wait in a Piccolo Squad party lobby with a shareable party code.",
+    "phone": {
+      "path": "assets/piccolo-squad/07-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/07-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  },
+  {
+    "caption": "Pick your challenge.",
+    "alt": "The Piccolo Squad mode selection shows Rush, Survival and Marathon.",
+    "phone": {
+      "path": "assets/piccolo-squad/08-phone.png",
+      "width": 2868,
+      "height": 1320
+    },
+    "tablet": {
+      "path": "assets/piccolo-squad/08-tablet.png",
+      "width": 2752,
+      "height": 2064
+    }
+  }
+]
