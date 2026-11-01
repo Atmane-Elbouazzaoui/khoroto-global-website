@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /party/
-Sitemap: https://khorotoglobal.com/sitemap.xml
+Sitemap: https://khorotoglobal.xyz/sitemap.xml

@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist"
-ORIGIN = "https://khorotoglobal.com"
+ORIGIN = "https://khorotoglobal.xyz"
 EMAIL = "armando.b.higgin@gmail.com"
 
 
@@ -80,7 +80,7 @@ def build():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(render(page))
     (OUTPUT / ".nojekyll").touch()
-    (OUTPUT / "CNAME").write_text("khorotoglobal.com\n")
+    (OUTPUT / "CNAME").write_text("khorotoglobal.xyz\n")
     (OUTPUT / "site.webmanifest").write_text(json.dumps({"name":"Khoroto Global", "short_name":"Khoroto", "start_url":"./", "scope":"./", "display":"browser", "theme_color":"#f3eee4", "background_color":"#f3eee4", "icons":[{"src":"assets/khoroto-logo.png", "sizes":"885x885", "type":"image/png", "purpose":"any"}]}, indent=2) + "\n")
     (OUTPUT / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /party/\nSitemap: " + ORIGIN + "/sitemap.xml\n")
     ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")

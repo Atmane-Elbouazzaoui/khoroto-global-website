@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'dist'
-ORIGIN = 'https://khorotoglobal.com'
+ORIGIN = 'https://khorotoglobal.xyz'
 
 
 class Page(HTMLParser):
@@ -76,7 +76,7 @@ def check():
             if url.scheme != 'https':
                 errors.append(f'{name}: unsupported link scheme: {link}')
                 continue
-            if url.netloc != 'khorotoglobal.com':
+            if url.netloc != 'khorotoglobal.xyz':
                 if url.netloc in ['pippinplaza.com', 'alulimgames.com']:
                     errors.append(f'{name}: old public URL: {link}')
                 continue
@@ -90,7 +90,7 @@ def check():
             references += 1
     if len(pages) != 14:
         errors.append(f'Expected 14 pages, found {len(pages)}')
-    if (SITE / 'CNAME').read_text().strip() != 'khorotoglobal.com':
+    if (SITE / 'CNAME').read_text().strip() != 'khorotoglobal.xyz':
         errors.append('Wrong custom domain')
     if hashlib.sha256((SITE / 'assets/khoroto-logo.png').read_bytes()).hexdigest() != '406c580ea9df593a3b9dc1121242624364c3a9c29cf24a3aacb2957eb29e8b3d':
         errors.append('Supplied logo pixels changed')

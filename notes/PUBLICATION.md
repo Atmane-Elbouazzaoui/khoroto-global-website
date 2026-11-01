@@ -5,6 +5,10 @@ Owner-confirmed scope: both Android games; GitHub repository
 after new-site verification; preserve old invitation compatibility. Ad-seller
 authorization is deliberately pending. Existing sites and iOS stay unchanged.
 
+The owner selected **khorotoglobal.xyz** after reviewing the first-year and renewal
+prices. The owner will perform the website visual check. Purchase confirmation,
+DNS setup and the custom-domain certificate are still pending.
+
 ## Hosting
 
 Source is published from `main:/docs` using standard GitHub Pages branch

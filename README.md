@@ -4,7 +4,7 @@ Static GitHub Pages website for **Radi Akka**, an individual game developer base
 in Morocco, publishing **Piccolo Squad** and **Brainrot Bills: Smash an Egg** on
 Android under **Khoroto Global**. Public contact: armando.b.higgin@gmail.com.
 
-Canonical domain: **https://khorotoglobal.com**.
+Canonical domain: **https://khorotoglobal.xyz**.
 
 The visual theme and page structure follow the existing Alulim studio website,
 with the owner-supplied Khoroto emblem and current game artwork. Existing sites

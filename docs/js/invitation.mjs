@@ -1,6 +1,6 @@
 // The public invitation contract mirrors Piccolo Squad's PartyInviteLink fields.
 // A syntactically valid link is not proof that a Photon room is still available.
-export const ORIGIN = 'https://khorotoglobal.com';
+export const ORIGIN = 'https://khorotoglobal.xyz';
 export const ANDROID_PACKAGE = 'com.piccolosquad.online.coop.party.puzzle';
 const required = ['code', 'region', 'version', 'room'];
 const allowed = new Set([...required, 'cluster']);

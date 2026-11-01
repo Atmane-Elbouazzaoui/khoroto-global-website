@@ -8,7 +8,7 @@ const query = value => new URLSearchParams(value).toString();
 test('preserves every connection field through a share round trip', () => {
   for (const data of [example, { ...example, cluster: 'eu-2.a_1' }]) {
     const url = new URL(invitationUrl(data));
-    assert.equal(url.origin, 'https://khorotoglobal.com');
+    assert.equal(url.origin, 'https://khorotoglobal.xyz');
     assert.equal(url.pathname, '/party/');
     assert.deepEqual(parseInvitation(url.search), data);
   }
@@ -49,9 +49,9 @@ test('decoded duplicate keys and percent-encoded injection cannot bypass validat
 
 test('Android intent pins the destination package, host and safe fallback', () => {
   const intent = androidIntent({ ...example, cluster:'us-1' });
-  assert.ok(intent.startsWith('intent://khorotoglobal.com/party/?'));
+  assert.ok(intent.startsWith('intent://khorotoglobal.xyz/party/?'));
   assert.ok(intent.includes(';package=com.piccolosquad.online.coop.party.puzzle;'));
-  assert.ok(intent.includes('S.browser_fallback_url='+encodeURIComponent('https://khorotoglobal.com/piccolo-squad.html#availability')));
+  assert.ok(intent.includes('S.browser_fallback_url='+encodeURIComponent('https://khorotoglobal.xyz/piccolo-squad.html#availability')));
   assert.ok(intent.endsWith(';end'));
   assert.throws(() => androidIntent({ ...example, version:'x;package=bad' }), TypeError);
 });
