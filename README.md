@@ -69,11 +69,16 @@ an app, redirect to an Apple store, or send invitation data to an API.
   from another site are silently authorized here. Add the verified provider
   export as `config/app-ads.verified.txt` when confirmed; it will be deployed as
   `/app-ads.txt` on the next build.
-- The Android association template is excluded from deployment. Replace its
-  placeholder using the actual Play app-signing SHA-256 certificate(s), verify
-  package/signature provenance, and save it as `config/assetlinks.verified.json`
-  to publish `/.well-known/assetlinks.json`. An upload key is not automatically
-  the Play app-signing key. Do not place private keys or passwords here.
+- The Android association is configured for the verified **direct-install APK**
+  signer of Piccolo Squad 2.0 (version code 1), package
+  `com.piccolosquad.online.coop.party.puzzle`. `apksigner verify` passed for the
+  APK with SHA-256 `98fe06987c5be33667b3a6711a3a8be0aa782dfa8053126eed5080e23fd19d56`.
+  `config/assetlinks.verified.json` publishes its certificate fingerprint at
+  `/.well-known/assetlinks.json`. The excluded template remains a reference.
+  **Play-delivered App Links still need the actual Play app-signing certificate**
+  before store release; add its verified fingerprint if it differs. An upload
+  certificate is not proof of the Play app-signing certificate. Only public
+  fingerprints belong here; private keys and passwords stay outside the site.
 - Both agreed Google Play URLs are wired. Brainrot Bills: Smash Egg ASMR returned
   HTTP 200 with its exact title. The owner requested Piccolo Squad's final package
   URL before launch; it returned HTTP 404 at the latest check, so the page asks
