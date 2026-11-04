@@ -1,8 +1,10 @@
 # Khoroto Global
 
-Static GitHub Pages website for **Radi Akka**, an individual game developer based
-in Morocco, publishing **Piccolo Squad** and **Brainrot Bills: Smash Egg ASMR** on
-Android under **Khoroto Global**. Public contact: support@khorotoglobal.xyz.
+Static GitHub Pages website for **Khoroto Global**, publishing **Piccolo Squad**
+and **Brainrot Bills: Smash Egg ASMR** on Android. Public contact:
+support@khorotoglobal.xyz. The responsible publisher, **Radi Akka**, is identified
+in the privacy, terms and account-deletion information. Promotional pages,
+shared footers and page metadata use the publishing brand.
 
 Canonical domain: **https://khorotoglobal.xyz**.
 
@@ -65,7 +67,8 @@ an app, redirect to an Apple store, or send invitation data to an API.
 - The custom domain, Namecheap DNS and enforced HTTPS are configured and verified.
   Keep the production CNAME when preparing updates. See
   [publication notes](notes/PUBLICATION.md).
-- Ad-seller authorization was explicitly deferred by the owner. No seller IDs
+- Ad-seller authorization is explicitly deferred by the owner to the next update.
+  No seller IDs
   from another site are silently authorized here. Add the verified provider
   export as `config/app-ads.verified.txt` when confirmed; it will be deployed as
   `/app-ads.txt` on the next build.

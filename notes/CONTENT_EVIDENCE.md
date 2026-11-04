@@ -1,5 +1,28 @@
 # Content evidence — 2026-11-01
 
+## November 4 approved brand copy
+
+The owner asked to reduce repetition of the developer's personal name and use
+Khoroto Global for public branding. The local candidate uses the brand in the
+homepage, support headings, common footer, copyright line and metadata. The
+responsible publisher, Radi Akka, remains identified once on each game privacy
+policy, website privacy, game terms and account/deletion page. Privacy processing
+descriptions, rights, contact address and deletion instructions are preserved.
+The latter two placements also make responsibility clear for contractual and
+account requests; this is not a claim that every listed page independently has
+a statutory personal-name requirement. The actual operator remains identifiable.
+
+Morocco's CNDP explains that data subjects must be told the controller's identity:
+https://www.cndp.ma/faq/. Google's privacy policy rules require the store entity
+or app to be named: https://support.google.com/googleplay/android-developer/answer/10144311.
+Neither source is a basis for repeating a personal name throughout marketing copy.
+
+Only copy and its existing artifact checks change. Theme, CSS, images, native
+scroll carousel, party URL parser/intent, store links and certificate association
+are preserved. The owner approved these concrete placements and publication on
+November 4. Ad-seller authorization/app-ads.txt is
+explicitly deferred to the next update; no placeholder seller file is created.
+
 ## Identity and scope
 
 Owner supplied: Khoroto Global; developer given name Akka, family name Radi;

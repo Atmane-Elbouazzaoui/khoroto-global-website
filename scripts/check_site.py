@@ -62,8 +62,15 @@ def check():
             errors.append(f'{name}: duplicate IDs')
         if not any(m.get('name') == 'description' and m.get('content') for m in page.meta):
             errors.append(f'{name}: missing description')
-        if 'Radi Akka' not in visible or 'Khoroto Global' not in visible:
-            errors.append(f'{name}: missing developer identity')
+        if 'Khoroto Global' not in visible:
+            errors.append(f'{name}: missing publisher brand')
+        identity_pages = {'privacy.html', 'brainrot-bills-privacy.html',
+                          'website-privacy.html', 'terms.html', 'delete-account.html'}
+        if name in identity_pages:
+            if visible.count('Radi Akka') != 1:
+                errors.append(f'{name}: expected one responsible-publisher identification')
+        elif 'Radi Akka' in raw:
+            errors.append(f'{name}: personal name outside legal/privacy information')
         if re.search(r'Pippin Plaza|Alulim Games|Atmane El Bouazzaoui', visible, re.I):
             errors.append(f'{name}: old public identity')
         if 'armando.b.higgin@gmail.com' in raw:

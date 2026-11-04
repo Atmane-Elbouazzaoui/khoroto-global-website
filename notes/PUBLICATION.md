@@ -1,5 +1,22 @@
 # Publication notes — 2026-11-01
 
+## November 4 approved brand-copy revision
+
+Brand-first copy is prepared locally: Khoroto Global on promotional pages and
+shared metadata/footer; Radi Akka once on each game privacy policy, website
+privacy, game terms and account/deletion page. The operator remains identified.
+The owner approved these placements and publication before ASO. Deployment/live
+verification is recorded in `notes/verification-brand-copy-live.json` after the
+push. Existing invitation scripts, public certificate association,
+artwork, URLs and lightweight layout are preserved.
+
+The owner explicitly defers ad-seller authorization/app-ads.txt until the next
+update. The current release queue should not silently reintroduce that work as
+a prerequisite to drafting the listing. Play-installed invitation verification
+still needs the actual Play app-signing certificate: compare it to the published
+fingerprint, add any different production fingerprint while retaining the tested
+APK's, then check an internal-track installation. No certificate value is guessed.
+
 Owner-confirmed scope: both Android games; GitHub repository
 `Atmane-Elbouazzaoui/khoroto-global-website`; migrate Piccolo Android public links
 after new-site verification; preserve old invitation compatibility. Ad-seller

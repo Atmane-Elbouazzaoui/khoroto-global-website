@@ -38,10 +38,10 @@ def navigation(prefix):
 def footer(prefix):
     return f'''<footer class="site-footer"><div class="shell"><div class="footer-grid"><div>{brand(prefix)}
       <p class="footer-intro">Play together. Make a little chaos. Find your next good game.</p>
-      <p class="footer-intro">Khoroto Global is the publishing brand of <strong>Radi Akka</strong>, an individual game developer based in Morocco.</p></div>
+      <p class="footer-intro">Independent games made in Morocco.</p></div>
       <div class="footer-group"><h2>Explore</h2><nav aria-label="Footer games"><a href="{prefix}piccolo-squad.html">Piccolo Squad</a><a href="{prefix}brainrot-bills.html">Brainrot Bills</a><a href="{prefix}support.html">Support & contact</a></nav></div>
       <div class="footer-group"><h2>Player information</h2><nav aria-label="Footer legal"><a href="{prefix}policies.html">Game policies</a><a href="{prefix}delete-account.html">Account & data deletion</a><a href="{prefix}licenses.html">Licenses & credits</a><a href="{prefix}website-privacy.html">Website privacy</a></nav></div></div>
-      <div class="footer-bottom"><p>&copy; 2026 Radi Akka · Khoroto Global.</p><p>Independent games / Made in Morocco</p></div></div></footer>'''
+      <div class="footer-bottom"><p>&copy; 2026 Khoroto Global.</p><p>Independent games / Made in Morocco</p></div></div></footer>'''
 
 
 def screenshot_gallery(prefix):
@@ -87,11 +87,11 @@ def render(page):
     return f'''<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title}</title><meta name="description" content="{description}"><meta name="author" content="Radi Akka">
+<title>{title}</title><meta name="description" content="{description}"><meta name="author" content="Khoroto Global">
 <meta name="theme-color" content="#f3eee4"><meta name="referrer" content="no-referrer">{robots}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Khoroto Global"><meta property="og:url" content="{canonical}">
-<meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta property="og:image" content="{ORIGIN}/{picture}"><meta property="og:image:alt" content="Khoroto Global — games by Radi Akka">
+<meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta property="og:image" content="{ORIGIN}/{picture}"><meta property="og:image:alt" content="Khoroto Global">
 <meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="{prefix}assets/khoroto-logo.png" sizes="885x885"><link rel="manifest" href="{prefix}site.webmanifest">
 <link rel="stylesheet" href="{versioned_asset(prefix, 'css/style.css')}"><link rel="stylesheet" href="{versioned_asset(prefix, 'css/khoroto.css')}">
