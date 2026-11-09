@@ -78,10 +78,13 @@ an app, redirect to an Apple store, or send invitation data to an API.
   APK with SHA-256 `98fe06987c5be33667b3a6711a3a8be0aa782dfa8053126eed5080e23fd19d56`.
   `config/assetlinks.verified.json` publishes its certificate fingerprint at
   `/.well-known/assetlinks.json`. The excluded template remains a reference.
-  **Play-delivered App Links still need the actual Play app-signing certificate**
-  before store release; add its verified fingerprint if it differs. An upload
-  certificate is not proof of the Play app-signing certificate. Only public
-  fingerprints belong here; private keys and passwords stay outside the site.
+  **2026-11-09:** Play Console's Deep links page reported `khorotoglobal.xyz`
+  failing validation for `/party/` and generated the required association. The
+  three additional Play-delivered certificate fingerprints it listed (`11:75:F3…`,
+  `3D:9F:47…`, `31:34:2B…`) are now published alongside the retained direct-install
+  `86:D3:3A…` entry, with the `handle_all_urls` relation only (no credential
+  sharing). Only public fingerprints belong here; private keys and passwords stay
+  outside the site.
 - Both agreed Google Play URLs are wired. Brainrot Bills: Smash Egg ASMR returned
   HTTP 200 with its exact title. The owner requested Piccolo Squad's final package
   URL before launch; it returned HTTP 404 at the latest check, so the page asks

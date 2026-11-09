@@ -7,7 +7,10 @@
       "namespace": "android_app",
       "package_name": "com.piccolosquad.online.coop.party.puzzle",
       "sha256_cert_fingerprints": [
-        "86:D3:3A:D7:6B:97:5B:06:3B:45:6E:F1:8D:AA:5A:41:E9:99:75:2E:E6:57:A0:6A:91:97:77:D6:40:75:C9:07"
+        "86:D3:3A:D7:6B:97:5B:06:3B:45:6E:F1:8D:AA:5A:41:E9:99:75:2E:E6:57:A0:6A:91:97:77:D6:40:75:C9:07",
+        "11:75:F3:C1:56:4E:30:9D:46:75:41:05:5F:85:99:21:F4:F3:20:EA:65:60:68:05:17:CB:BA:30:C8:4F:2F:21",
+        "3D:9F:47:B3:8F:5E:8C:FD:00:29:15:B5:17:F9:0D:4E:C0:92:A9:09:6F:23:BB:BC:19:D3:96:1B:DA:08:62:8C",
+        "31:34:2B:95:7D:4F:4D:36:2D:D4:8C:6F:76:F5:23:DD:DC:FF:3E:FC:8D:B8:9E:6B:57:21:DC:1A:0E:8C:54:B8"
       ]
     }
   }
